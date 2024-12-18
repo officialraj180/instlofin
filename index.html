@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .login-box {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            width: 175px;
+            margin: 0 auto 20px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            font-size: 14px;
+            background-color: #fafafa;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #0095f6;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        form button:hover {
+            background-color: #0078d4;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .line {
+            flex: 1;
+            height: 1px;
+            background-color: #dbdbdb;
+        }
+
+        .divider p {
+            margin: 0 10px;
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+
+        .fb-login {
+            display: block;
+            color: #385185;
+            font-weight: bold;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+
+        .forgot-password {
+            color: #00376b;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .signup-box {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+        }
+
+        .signup-box p {
+            font-size: 14px;
+        }
+
+        .signup-box a {
+            color: #0095f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <!-- Instagram Logo -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram Logo" class="logo">
+<img src="https://i.imgur.com/zqpwkLQ.png" alt="Instagram Logo" class="logo">
+            
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Phone number, username, or email" required>
+                <input type="text" id="password" placeholder="password" required>
+                <button type="submit">Log in</button>
+            </form>
+            <div class="divider">
+                <div class="line"></div>
+                <p>OR</p>
+                <div class="line"></div>
+            </div>
+            <a href="#" class="fb-login">Log in with Facebook</a>
+            <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        <div class="signup-box">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for form validation and handling
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get input values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Basic validation
+            if (username === "" || password === "") {
+                alert("Please fill in both fields.");
+                return;
+            }
+
+            // If valid, log the user in (this is just an example)
+            alert("Login successful!");
+
+            // Clear the form (optional)
+            document.getElementById('loginForm').reset();
+        });
+    </script>
+</body>
+</html>
